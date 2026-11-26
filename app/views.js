@@ -63,7 +63,7 @@ export function viewHome(register) {
     <article class="card">
       <h2>Three numbers that explain Japan</h2>
       <ol class="numbered">
-        <li><strong>128.08m → 124.09m.</strong> Population fell by 4 million from its 2008 peak to 2024 — and the fall is speeding up: 2024 alone lost about 0.6 million people.</li>
+        <li><strong>128.08m → 123.80m.</strong> Population fell by 4.3 million from its 2008 peak to 2024 — and the fall is speeding up: 2024 alone lost about 0.55 million people.</li>
         <li><strong>721,000 births, 1,605,000 deaths.</strong> In 2024 deaths outnumbered births more than two to one. The natural decrease was about 884,000 people.</li>
         <li><strong>1.15 children per woman.</strong> The 2024 fertility rate is the lowest on record. At this rate each generation is roughly half the size of its parents'.</li>
       </ol>
@@ -84,9 +84,9 @@ export function viewHome(register) {
     const caption = document.getElementById("home-caption");
     if (!canvas) return;
     const series = {
-      total: { points: D.POP_TREND.map((p) => ({ x: p.year, y: p.total })), unit: "m", decimals: 2, caption: "Total population, millions. Peak: 128.08m in 2008; 124.09m in 2024." },
-      elderly: { points: D.ELDERLY_SHARE.map((p) => ({ x: p.year, y: p.value })), unit: "%", decimals: 1, caption: "Share of the population aged 65 and over. 7.1% in 1970 → 29.2% in 2024." },
-      children: { points: D.CHILD_SHARE.map((p) => ({ x: p.year, y: p.value })), unit: "%", decimals: 1, caption: "Share of the population aged 0–14. 23.9% in 1970 → 11.3% in 2024." },
+      total: { points: D.POP_TREND.map((p) => ({ x: p.year, y: p.total })), unit: "m", decimals: 2, caption: "Total population, millions. Peak: 128.08m in 2008; 123.80m in 2024." },
+      elderly: { points: D.ELDERLY_SHARE.map((p) => ({ x: p.year, y: p.value })), unit: "%", decimals: 1, caption: "Share of the population aged 65 and over. 7.1% in 1970 → 29.3% in 2024." },
+      children: { points: D.CHILD_SHARE.map((p) => ({ x: p.year, y: p.value })), unit: "%", decimals: 1, caption: "Share of the population aged 0–14. 23.9% in 1970 → 11.2% in 2024." },
     };
     let metric = "total";
     const draw = () => {
@@ -142,15 +142,15 @@ export function viewPopulation(register) {
       <thead><tr><th data-sort="name">Prefecture ↕</th><th data-sort="value" class="num">Population (millions) ↕</th></tr></thead>
       <tbody>${rows}</tbody>
     </table>
-    ${sourceNote("Statistics Bureau of Japan, Population Estimates 2024. Tokyo alone holds 11.4% of the country.")}
+    ${sourceNote("Statistics Bureau of Japan, Population Estimates 2024. Tokyo alone holds 11.5% of the country.")}
   </section>
 
   <section class="card">
     <h2>Reading the pyramid</h2>
     <p>The two bulges are the baby booms: the 70–74 band (born 1947–49, right after the war) and the
     45–49 band (born 1971–74, their children). Below them every band is narrower than the one above it —
-    that is what a fertility rate of 1.15 looks like. The 65+ group, 36.25 million people, now outnumbers
-    children (14.02 million) by more than two and a half to one.</p>
+    that is what a fertility rate of 1.15 looks like. The 65+ group, 36.24 million people, now outnumbers
+    children (13.83 million) by more than two and a half to one.</p>
   </section>`;
 
   register(() => {
@@ -307,7 +307,7 @@ export function viewEconomy(register) {
     <p class="eyebrow">Economy &amp; prices</p>
     <h1>The world's 4th-largest economy, still growing slowly</h1>
     <p class="lede">Nominal GDP passed ¥600 trillion for the first time in 2024, but real growth was
-    slightly negative. Inflation, absent for decades, is back — and so is the debate about the
+    barely positive, just +0.1%. Inflation, absent for decades, is back — and so is the debate about the
     world's heaviest public debt load.</p>
   </section>
 
@@ -384,7 +384,7 @@ export function viewSources(register) {
     <h2>Methods &amp; notes</h2>
     <ul class="notes">
       <li>Population figures are for 1 October each year (Statistics Bureau estimates); census years use the census count.</li>
-      <li>Age-band figures for the 2024 pyramid are rounded to the nearest 0.1 million; bands sum to 123.7m against the 124.09m total because of rounding.</li>
+      <li>Age-band figures for the 2024 pyramid are rounded to the nearest 0.1 million; bands sum to 123.7m against the 123.80m total because of rounding.</li>
       <li>Births, deaths and fertility are from the final Vital Statistics, except 2024, which uses the preliminary release.</li>
       <li>GDP in dollars and government debt are IMF World Economic Outlook figures (October 2025); GDP in yen and real growth are Cabinet Office national accounts.</li>
       <li>Nothing on this site is fetched from the internet: every number lives in the site's own files, and the site works with no network connection.</li>

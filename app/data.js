@@ -13,10 +13,10 @@ export const META = {
 
 // Headline indicators shown on the home page.
 export const KPI = [
-  { id: "population", label: "Total population", value: "124.09m", detail: "1 Oct 2024, down 0.6m on 2023", source: "Statistics Bureau of Japan, Population Estimates 2024" },
-  { id: "median-age", label: "Median age", value: "49.1 yrs", detail: "Among the highest in the world", source: "United Nations, World Population Prospects 2024" },
+  { id: "population", label: "Total population", value: "123.80m", detail: "1 Oct 2024, down 0.55m on 2023", source: "Statistics Bureau of Japan, Population Estimates 2024" },
+  { id: "median-age", label: "Median age", value: "49.4 yrs", detail: "Among the highest in the world", source: "United Nations, World Population Prospects 2024" },
   { id: "tfr", label: "Total fertility rate", value: "1.15", detail: "Children per woman, 2024 — a record low", source: "Ministry of Health, Labour and Welfare, Vital Statistics 2024" },
-  { id: "elderly", label: "Aged 65 and over", value: "29.2%", detail: "36.25 million people, 1 Oct 2024", source: "Statistics Bureau of Japan, Population Estimates 2024" },
+  { id: "elderly", label: "Aged 65 and over", value: "29.3%", detail: "36.24 million people, 1 Oct 2024", source: "Statistics Bureau of Japan, Population Estimates 2024" },
   { id: "gdp", label: "Nominal GDP", value: "$4.03tn", detail: "4th largest economy, 2024", source: "IMF, World Economic Outlook, Oct 2025" },
   { id: "jobs", label: "Unemployment rate", value: "2.5%", detail: "Annual average, 2024", source: "Statistics Bureau of Japan, Labour Force Survey 2024" },
 ];
@@ -36,7 +36,7 @@ export const POP_TREND = [
   { year: 2010, total: 128.06 },
   { year: 2015, total: 127.09 },
   { year: 2020, total: 126.15 },
-  { year: 2024, total: 124.09 },
+  { year: 2024, total: 123.8 },
 ];
 
 // Population peak, for the story on the home page.
@@ -51,9 +51,9 @@ export const AGE_STRUCTURE = {
     { group: "65+", value: 14.89, share: 12.0 },
   ],
   2024: [
-    { group: "0–14", value: 14.02, share: 11.3 },
-    { group: "15–64", value: 73.73, share: 59.4 },
-    { group: "65+", value: 36.25, share: 29.2 },
+    { group: "0–14", value: 13.83, share: 11.2 },
+    { group: "15–64", value: 73.73, share: 59.6 },
+    { group: "65+", value: 36.24, share: 29.3 },
   ],
 };
 
@@ -87,13 +87,13 @@ export const PYRAMID_2024 = [
 // Source: Statistics Bureau of Japan, Population Estimates 2024.
 export const PREFECTURES = [
   { name: "Tokyo", value: 14.18 },
-  { name: "Kanagawa", value: 9.24 },
-  { name: "Osaka", value: 8.81 },
-  { name: "Aichi", value: 7.49 },
-  { name: "Saitama", value: 7.34 },
-  { name: "Chiba", value: 6.28 },
-  { name: "Hyogo", value: 5.38 },
-  { name: "Hokkaido", value: 5.09 },
+  { name: "Kanagawa", value: 9.23 },
+  { name: "Osaka", value: 8.76 },
+  { name: "Aichi", value: 7.46 },
+  { name: "Saitama", value: 7.33 },
+  { name: "Chiba", value: 6.25 },
+  { name: "Hyogo", value: 5.34 },
+  { name: "Hokkaido", value: 5.04 },
 ];
 
 // Share of the population aged 65 and over, percent. Source: Statistics
@@ -105,7 +105,7 @@ export const ELDERLY_SHARE = [
   { year: 2000, value: 17.4 },
   { year: 2010, value: 23.0 },
   { year: 2020, value: 28.6 },
-  { year: 2024, value: 29.2 },
+  { year: 2024, value: 29.3 },
 ];
 
 // Share of the population aged 0–14, percent. Same source.
@@ -116,7 +116,7 @@ export const CHILD_SHARE = [
   { year: 2000, value: 14.6 },
   { year: 2010, value: 13.1 },
   { year: 2020, value: 11.9 },
-  { year: 2024, value: 11.3 },
+  { year: 2024, value: 11.2 },
 ];
 
 // Live births and deaths, thousands. Source: MHLW, Vital Statistics.
@@ -149,8 +149,9 @@ export const LIFE_EXPECTANCY = {
   source: "Ministry of Health, Labour and Welfare, Abridged Life Tables 2023",
 };
 
-// Marriages in 2024, first year below 500,000. Source: MHLW, Vital Statistics 2024.
-export const MARRIAGES_2024 = { value: 499999, note: "First year below 500,000 since records began" };
+// Marriages in 2024, the second year below 500,000 (2023 was the first,
+// with 489,281). Source: MHLW, Vital Statistics 2024.
+export const MARRIAGES_2024 = { value: 499999, note: "Second year below 500,000; up 10,718 on 2023" };
 
 // Labour market, annual averages. Source: Statistics Bureau of Japan,
 // Labour Force Survey. Unemployment rate in percent.
@@ -191,10 +192,10 @@ export const ECONOMY = {
     { year: 2021, value: 2.7 },
     { year: 2022, value: 0.9 },
     { year: 2023, value: 1.5 },
-    { year: 2024, value: -0.1 },
+    { year: 2024, value: 0.1 },
   ],
   cpi2024: 2.7, // percent, all items, annual average
-  govDebt: 251, // percent of GDP, general government gross debt, IMF 2024
+  govDebt: 236.1, // percent of GDP, general government gross debt, IMF 2024
   exports2024: 107.1, // trillion yen, MOF customs 2024
   imports2024: 112.4, // trillion yen, MOF customs 2024
 };
