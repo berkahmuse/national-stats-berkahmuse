@@ -220,7 +220,7 @@ export function viewBirths(register) {
       <dl class="facts">
         <div><dt>Life expectancy, women (2023)</dt><dd>${D.LIFE_EXPECTANCY.women} years</dd></div>
         <div><dt>Life expectancy, men (2023)</dt><dd>${D.LIFE_EXPECTANCY.men} years</dd></div>
-        <div><dt>Marriages (2024)</dt><dd>499,999 — first year below 500,000</dd></div>
+        <div><dt>Marriages (2024)</dt><dd>${D.MARRIAGES_2024.value.toLocaleString("en-US")} — ${D.MARRIAGES_2024.note}</dd></div>
         <div><dt>Births (2024)</dt><dd>720,988 — the lowest since records began in 1899</dd></div>
         <div><dt>Deaths (2024)</dt><dd>1,605,298 — the highest on record</dd></div>
       </dl>
